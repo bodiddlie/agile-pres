@@ -21,6 +21,34 @@
 		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
 		document.getElementsByTagName('head')[0].appendChild(link);
 	</script>
+	<style>
+		.column-container {
+			display: flex;
+		}
+
+		.column {
+			flex: 1;
+		}
+
+		.column .story {
+			padding: 1rem;
+			border: 1px solid #ffb700;
+			border-radius: 15px;
+			margin-right: .5rem;
+		}
+
+		.story .description,
+		.story h6,
+		.story ul,
+		.story .points {
+			font-size: 1rem;
+			text-align: left;
+		}
+
+		.story .success {
+			margin-top: .5rem;
+		}
+	</style>
 </head>
 
 <body>
@@ -30,35 +58,57 @@
 				<h1>Goodyear Apps &amp; Agile</h1>
 				<h3>An overview</h3>
 			</section>
+
 			<section>
 				<h2>Agile Manifesto</h2>
 				<ul style="text-align:center;list-style:none;">
-					<li>Invdividuals and interactions over processes and tools</li>
-					<li>Working software over comprehensive documentation</li>
-					<li>Customer collaboration over contract negotiation</li>
-					<li>Responding to change over following a plan</li>
+					<li class="fragment" data-fragment-index="1">
+						<span class="fragment highlight-red" data-fragment-index="10">Invdividuals and interactions</span>
+						<span class="fragment" data-fragment-index="2">
+							<span class="fragment highlight-blue" data-fragment-index="10">over processes and tools</span>
+						</span>
+					</li>
+					<li class="fragment" data-fragment-index="3">
+						<span class="fragment highlight-red" data-fragment-index="10">Working software</span>
+						<span class="fragment" data-fragment-index="4">
+							<span class="fragment highlight-blue" data-fragment-index="10">over comprehensive documentation</span>
+						</span>
+					</li>
+					<li class="fragment" data-fragment-index="5">
+						<span class="fragment highlight-red" data-fragment-index="10">Customer collaboration</span>
+						<span class="fragment" data-fragment-index="6">
+							<span class="fragment highlight-blue" data-fragment-index="10">over contract negotiation</span>
+						</span>
+					</li>
+					<li class="fragment" data-fragment-index="7">
+						<span class="fragment highlight-red" data-fragment-index="10">Responding to change</span>
+						<span class="fragment" data-fragment-index="8">
+							<span class="fragment highlight-blue" data-fragment-index="10">over following a plan</span>
+						</span>
+					</li>
 				</ul>
-				<p>
+				<p class="fragment" style="font-size:1.5rem;color: white;" data-fragment-index="9">
 					That is, while there is value in the items on the right, we value items on the left more.
 				</p>
 				<aside class="notes">
 					Notes go here
 				</aside>
 			</section>
+
 			<section>
 				<h3>What is our objective?</h3>
-				<ul>
-					<li>Serve the Citizens?</li>
-					<li>Assist City Staff?</li>
-					<li>Align with Strategic Action Plan?</li>
+				<ul style="list-style:none;text-align:center;">
+					<li class="fragment"><span class="fragment strike">Serve the Citizens?</span></li>
+					<li class="fragment"><span class="fragment strike">Assist City Staff?</span></li>
+					<li class="fragment"><span class="fragment strike">Align with Strategic Action Plan?</span></li>
 				</ul>
-				<p>
+				<p class="fragment">
 					No. As developers, our goal is to produce QUALITY SOFTWARE.
 				</p>
 			</section>
 			<section>
 				<h5>How do we focus on that objective?</h5>
-				<ul>
+				<ul class="fragment">
 					<li>Customer engagement &amp; involvement</li>
 					<li>Accountability</li>
 					<li>Minimizing impact of defects</li>
@@ -67,10 +117,10 @@
 			<section>
 				<h5>User Stories</h5>
 				<ul>
-					<li>Working with the customer to determine not just requirements, but also design</li>
-					<li>Deep dive into what the customer wants</li>
-					<li>Catch issues/concerns early</li>
-					<li>Get that crucial customer buy-in</li>
+					<li class="fragment">Working with the customer to determine not just requirements, but also design</li>
+					<li class="fragment">Deep dive into what the customer wants</li>
+					<li class="fragment">Catch issues/concerns early</li>
+					<li class="fragment">Get that crucial customer buy-in</li>
 				</ul>
 			</section>
 			<section>
@@ -87,7 +137,7 @@
 				</ul>
 			</section>
 			<section>
-				<h5>Estimation</h5>
+				<h5>Project Estimation</h5>
 				<ul>
 					<li>Estimation is difficult</li>
 					<li>Current process is a best-guess effort</li>
@@ -97,28 +147,67 @@
 			<section>
 				<h5>Better Estimates</h5>
 				<ul>
-					<li>Break User Stories into achievable tasks</li>
-					<li>Estimate effort, not time</li>
-					<li>Assign points using Fibonacci sequence (0, 1, 2, 3, 5, 8, 13, 21...)</li>
-					<li>Group tasks into a sprints</li>
-					<li># of points finished in sprint = <em>velocity</em></li>
+					<li class="fragment">Break User Stories into achievable tasks</li>
+					<li class="fragment">Estimate effort, not time</li>
+					<li class="fragment">Assign points to reflect amount of effort</li>
+					<li class="fragment">Group tasks into sprints</li>
+					<li class="fragment"># of points finished in sprint = <em>velocity</em></li>
 			</section>
 			<section>
 				<h5>Estimate example</h5>
+				<div class="column-container">
+					<div class="column fragment">
+						<div class="story">
+							<div class="description">As an Engineering Customer I need to be able to sign-in at the front desk.</div>
+							<div class="success">
+								<h6>Success Criteria</h6>
+								<ul>
+									<li>Can enter name and reason for visit</li>
+									<li>Both fields are required</li>
+									<li>Dropdown for common reason choices</li>
+									<li>After submission, staff are notified of customer in queue</li>
+								</ul>
+							</div>
+							<div class="points">
+								Story Points: <span class="fragment highlight-red">1</span>
+							</div>
+						</div>
+					</div>
+					<div class="column fragment">
+						<div class="story">
+							<div class="description">As an Engineering Employee I need to be able to manage the customer queue.</div>
+							<div class="success">
+								<h6>Success Criteria</h6>
+								<ul>
+									<li>Can see list of customers in queue</li>
+									<li>Clicking on customer brings up details</li>
+									<li>Can close out customer session</li>
+									<li>Tracks date/time customer session started/ended</li>
+								</ul>
+							</div>
+							<div class="points">
+								Story Points: <span class="fragment highlight-red">3</span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 			<section>
-				<h5>Sprints</h5>
+				<h5>Sprints/Iterations</h5>
 				<ul>
 					<li>Specific time interval. Same every time</li>
 					<li>Every sprint results in a deliverable piece of software</li>
 				</ul>
 			</section>
 			<section>
-				<h5>Nail, short, over</h5>
+				<h5>Sprints &amp; Deadlines</h5>
 				<ul>
-					<li>Meet deadline exactly? Awesome onto the next.</li>
-					<li>Come in under the deadline? Good, recalculate velocity, onto the next.</li>
-					<li>Cut features or push deadline? Fine. Evaluate why, onto the next.</li>
+					<li class="fragment" data-fragment-index="1">Meet deadline exactly? <span class="fragment" data-fragment-index="2">Awesome, <span class="fragment highlight-red" data-fragment-index="7">onto the next.</span></span>
+					</li>
+					<li class="fragment" data-fragment-index="3">Come in under the deadline? <span class="fragment" data-fragment-index="4">Good, recalculate velocity, <span class="fragment highlight-red" data-fragment-index="7">onto the next.</span></span>
+					</li>
+					<li class="fragment" data-fragment-index="5">Cut features or push deadline? <span class="fragment" data-fragment-index="6">Fine. Evaluate why, <span class="fragment highlight-red" data-fragment-index="7">onto the next.</span></span>
+					</li>
 			</section>
 			<section>
 				<h5>The key</h5>
@@ -136,14 +225,16 @@
 				</ul>
 			</section>
 			<section>
-				<h5>Defects</h5>
-				<p>
+				<h5>Dealing With Defects</h5>
+				<p class="fragment" data-fragment-index="1">
 					Bugs found as a result of working on a sprint are not bugs. They are part and parcel of development. They are to be fixed
 					immediately and then they are done. Time spent tracking these is time lost focusing on the sprint.
 				</p>
-				<p>
+				<hr class="fragment" data-fragment-index="2">
+				<p class="fragment" data-fragment-index="2">
 					Once a sprint is finished and a deliverable is out, any bugs found or reported
-					<em>must</em> be tracked. These will often become new tasks or stories that need to be evaluated for priority.
+					<em class="fragment highlight-red" data-fragment-index="2">must</em> be tracked. These will often become new tasks or
+					stories that need to be evaluated for priority.
 				</p>
 			</section>
 			<section>
@@ -157,13 +248,16 @@
 			<section>
 				<h5>Tools</h5>
 				<ul>
-					<li>VSTS already has agile tooling.</li>
-					<li>Stakeholder login</li>
-					<li>Git</li>
-					<li>Continuous Integration</li>
-					<li>Continuous Deployment</li>
-					<li>Code review</li>
+					<li>VSTS already has agile tooling</li>
+					<li class="fragment">Stakeholder login</li>
+					<li class="fragment">Git</li>
+					<li class="fragment">Continuous Integration</li>
+					<li class="fragment">Continuous Deployment</li>
+					<li class="fragment">Code review</li>
 				</ul>
+			</section>
+			<section>
+				<h4>Thoughts?</h4>
 			</section>
 		</div>
 	</div>
