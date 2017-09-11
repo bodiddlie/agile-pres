@@ -1,62 +1,190 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>Goodyear Agile</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/cog.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h1>Snapshot Testing with Jest</h1>
-					<h3>Phoenix ReactJS</h3>
-					<p>
-						Nick Klepinger - <a href="http://twitter.com/bodiddlie">@bodiddlie</a>
-					</p>
-				</section>
-				<section>
-					<h2>Current State of Testing</h2>
-					<ul>
-						<li>Mocha - Chai/Sinon</li>
-						<li>Enzyme</li>
-					</ul>
-				</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Goodyear Apps &amp; Agile</h1>
+				<h3>An overview</h3>
+			</section>
+			<section>
+				<h2>Agile Manifesto</h2>
+				<ul style="text-align:center;list-style:none;">
+					<li>Invdividuals and interactions over processes and tools</li>
+					<li>Working software over comprehensive documentation</li>
+					<li>Customer collaboration over contract negotiation</li>
+					<li>Responding to change over following a plan</li>
+				</ul>
+				<p>
+					That is, while there is value in the items on the right, we value items on the left more.
+				</p>
+				<aside class="notes">
+					Notes go here
+				</aside>
+			</section>
+			<section>
+				<h3>What is our objective?</h3>
+				<ul>
+					<li>Serve the Citizens?</li>
+					<li>Assist City Staff?</li>
+					<li>Align with Strategic Action Plan?</li>
+				</ul>
+				<p>
+					No. As developers, our goal is to produce QUALITY SOFTWARE.
+				</p>
+			</section>
+			<section>
+				<h5>How do we focus on that objective?</h5>
+				<ul>
+					<li>Customer engagement &amp; involvement</li>
+					<li>Accountability</li>
+					<li>Minimizing impact of defects</li>
+				</ul>
+			</section>
+			<section>
+				<h5>User Stories</h5>
+				<ul>
+					<li>Working with the customer to determine not just requirements, but also design</li>
+					<li>Deep dive into what the customer wants</li>
+					<li>Catch issues/concerns early</li>
+					<li>Get that crucial customer buy-in</li>
+				</ul>
+			</section>
+			<section>
+				<h5>Example User Story</h5>
+				<p>
+					As an <span class="fragment fade-in">Engineering Customer</span> I need to be able to <span class="fragment fade-in">sign-in at the front desk</span>.
+				</p>
+				<h6 class="fragment">Success Criteria</h6>
+				<ul>
+					<li class="fragment">Can enter name and reason for visit</li>
+					<li class="fragment">Both fields are required</li>
+					<li class="fragment">Dropdown for common reason choices</li>
+					<li class="fragment">After submission, staff are notified of customer in queue</li>
+				</ul>
+			</section>
+			<section>
+				<h5>Estimation</h5>
+				<ul>
+					<li>Estimation is difficult</li>
+					<li>Current process is a best-guess effort</li>
+					<li>Not tracking our estimates</li>
+				</ul>
+			</section>
+			<section>
+				<h5>Better Estimates</h5>
+				<ul>
+					<li>Break User Stories into achievable tasks</li>
+					<li>Estimate effort, not time</li>
+					<li>Assign points using Fibonacci sequence (0, 1, 2, 3, 5, 8, 13, 21...)</li>
+					<li>Group tasks into a sprints</li>
+					<li># of points finished in sprint = <em>velocity</em></li>
+			</section>
+			<section>
+				<h5>Estimate example</h5>
+			</section>
+			<section>
+				<h5>Sprints</h5>
+				<ul>
+					<li>Specific time interval. Same every time</li>
+					<li>Every sprint results in a deliverable piece of software</li>
+				</ul>
+			</section>
+			<section>
+				<h5>Nail, short, over</h5>
+				<ul>
+					<li>Meet deadline exactly? Awesome onto the next.</li>
+					<li>Come in under the deadline? Good, recalculate velocity, onto the next.</li>
+					<li>Cut features or push deadline? Fine. Evaluate why, onto the next.</li>
+			</section>
+			<section>
+				<h5>The key</h5>
+				<p>They key is to constantly be reevaluating the tasks to see where they fit in the project. Tracking this gives us meaningful
+					data on what we're doing and how we can change to make it better.
+				</p>
+			</section>
+			<section>
+				<h5>Customer Interaction</h5>
+				<ul>
+					<li>Customer should be involved throughout project</li>
+					<li>Building requirements through user stories is a customer centric activity</li>
+					<li>Requirements are expected to change</li>
+					<li>Continuous Improvement</li>
+				</ul>
+			</section>
+			<section>
+				<h5>Defects</h5>
+				<p>
+					Bugs found as a result of working on a sprint are not bugs. They are part and parcel of development. They are to be fixed
+					immediately and then they are done. Time spent tracking these is time lost focusing on the sprint.
+				</p>
+				<p>
+					Once a sprint is finished and a deliverable is out, any bugs found or reported
+					<em>must</em> be tracked. These will often become new tasks or stories that need to be evaluated for priority.
+				</p>
+			</section>
+			<section>
+				<h5>Tracking Defects</h5>
+				<p>
+					Tracking defects that are found out-of-sprint is very important. They need to be carefully analyzed to determine why they
+					made it out of sprint. This is not negative tracking. It just means we can potentially learn from it and prevent it
+					during sprints in the future.
+				</p>
+			</section>
+			<section>
+				<h5>Tools</h5>
+				<ul>
+					<li>VSTS already has agile tooling.</li>
+					<li>Stakeholder login</li>
+					<li>Git</li>
+					<li>Continuous Integration</li>
+					<li>Continuous Deployment</li>
+					<li>Code review</li>
+				</ul>
+			</section>
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
 </html>
