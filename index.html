@@ -91,7 +91,7 @@
 					That is, while there is value in the items on the right, we value items on the left more.
 				</p>
 				<aside class="notes">
-					Notes go here
+					Also, we won't sacrifice the things on the right in the name of the things on the left.
 				</aside>
 			</section>
 
@@ -105,14 +105,23 @@
 				<p class="fragment">
 					Obviously, but as developers, our goal is to produce QUALITY SOFTWARE.
 				</p>
+				<aside class="notes">
+					1. Yes, but why are we doing something if it doesn't do that already? 2. Same. 3. Of course, but that determination should
+					have been made already. - Quality Software supports are those objectives.
+				</aside>
 			</section>
 			<section>
-				<h5>How do we focus on that objective?</h5>
+				<h5>How do we focus on the objective of quality software?</h5>
 				<ul class="fragment">
 					<li>Customer engagement &amp; involvement</li>
 					<li>Accountability</li>
 					<li>Minimizing impact of defects</li>
 				</ul>
+				<aside class="notes">
+					Engaged customers provide valuable feedback to improve the software while developing. We know we do a good job. We think
+					you know we do a good job. But how do we prove that beyond a gut feeling? Defects will always happen, but minimizing
+					the impact means a better experience for all involved.
+				</aside>
 			</section>
 			<section>
 				<h5>Customer Interaction</h5>
@@ -122,6 +131,10 @@
 					<li>Requirements are expected to change</li>
 					<li>Continuous Improvement</li>
 				</ul>
+				<aside class="notes">
+					Requirements change is a when not an if. Improvement is not just over iterations, but as a whole as well. We should constantly
+					be improving.
+				</aside>
 			</section>
 			<section>
 				<h5>User Stories</h5>
@@ -131,11 +144,15 @@
 					<li class="fragment">Catch issues/concerns early</li>
 					<li class="fragment">Get that crucial customer buy-in</li>
 				</ul>
+				<aside class="notes">
+					This is the first stop for the "lottery". Not surface level or high level overview. Really get down into what the customer
+					wants. Deeper understanding makes it easier to catch issues. Buy-in for the process, the project, the features.
+				</aside>
 			</section>
 			<section>
 				<h5>Example User Story</h5>
 				<p>
-					As an <span class="fragment fade-in">Permitting Customer</span> I need to be able to <span class="fragment fade-in">sign-in at the front desk</span>,
+					As a <span class="fragment fade-in">Permitting Customer</span> I need to be able to <span class="fragment fade-in">sign-in at the front desk</span>,
 					so that
 					<span class="fragment fade-in">Permitting staff can assist me</span>.
 				</p>
@@ -146,6 +163,10 @@
 					<li class="fragment">Dropdown for common reason choices</li>
 					<li class="fragment">After submission, staff are notified of customer in queue</li>
 				</ul>
+				<aside class="notes">
+					As a, need to, so that format is not required, but a good guideline. Customer spells out the success criteria and then signs
+					off on these at completion.
+				</aside>
 			</section>
 			<section>
 				<h5>Breaking Story Into Tasks</h5>
@@ -157,6 +178,9 @@
 					<li>Build backend API for receiving data</li>
 					<li>Configure notifications</li>
 				</ul>
+				<aside class="notes">
+					This is necessary for proper estimation.
+				</aside>
 			</section>
 			<section>
 				<h5>Project Estimation</h5>
@@ -165,6 +189,9 @@
 					<li>Current process is a best-guess effort</li>
 					<li>Not tracking our estimates</li>
 				</ul>
+				<aside class="notes">
+					We've been good at our guesses, but we can always do better. This gives us data to do that.
+				</aside>
 			</section>
 			<section>
 				<h5>Better Estimates</h5>
@@ -174,6 +201,11 @@
 					<li class="fragment">Assign points to reflect amount of effort (e.g. 0, 1, 2, 3, 5, ...)</li>
 					<li class="fragment">Group tasks into iterations</li>
 					<li class="fragment"># of points finished in iteration = <em>velocity</em></li>
+				</ul>
+				<aside class="notes">
+					We use estimates of effort and not time because time estimates can put false ideas into our heads and customers heads. Velocity
+					+ grouping = chunks of time.
+				</aside>
 			</section>
 			<section>
 				<h5>Iterations</h5>
@@ -182,6 +214,10 @@
 					<li>Every iteration results in a deliverable piece of software</li>
 					<li>Using velocity we determine what features will fit in a iteration</li>
 				</ul>
+				<aside class="notes">
+					Standard is 2-4 weeks. Whatever we pick we should stick with as a cycle time. Deliverable != production. Just need something
+					to demo to customer.
+				</aside>
 			</section>
 			<section>
 				<h5>Iterations &amp; Deadlines</h5>
@@ -192,6 +228,7 @@
 					</li>
 					<li class="fragment" data-fragment-index="5">Cut features or push deadline? <span class="fragment" data-fragment-index="6">Fine. Evaluate why, <span class="fragment highlight-red" data-fragment-index="7">onto the next.</span></span>
 					</li>
+				</ul>
 			</section>
 			<section>
 				<h5>The key</h5>
@@ -240,6 +277,12 @@
 					<li class="fragment">Continuous Integration</li>
 					<li class="fragment">Continuous Deployment</li>
 				</ul>
+				<aside class="notes">
+					Stakeholder for now means Cindy/Alan, but could be customers if we want. Git will enable us to move quicker and also open
+					up opportunities for tooling. Linting our JS code will help to enforce style and catch potential bugs that traditionally
+					are hard in untyped languages. Having unit tests and measuring code coverage = preventing defects and being more comfortable
+					making changes CI will verify tests and also mean it's better than "on my machine" CD = future
+				</aside>
 			</section>
 			<section>
 				<h4>Thoughts?</h4>
